@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="20" height="10" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="forest_tiles" tilewidth="32" tileheight="32">
+  <image source="forest_tiles.png" width="512" height="512"/>
+  <tile id="0">
+   <properties>
+    <property name="bottom" value="True"/>
+    <property name="left" value="True"/>
+    <property name="right" value="True"/>
+    <property name="top" value="True"/>
+   </properties>
+  </tile>
+  <tile id="27">
+   <properties>
+    <property name="bottom" value="True"/>
+    <property name="left" value="True"/>
+    <property name="right" value="True"/>
+    <property name="top" value="True"/>
+   </properties>
+  </tile>
+  <tile id="55">
+   <properties>
+    <property name="bottom" value="True"/>
+    <property name="left" value="True"/>
+    <property name="right" value="True"/>
+    <property name="top" value="True"/>
+   </properties>
+  </tile>
+  <tile id="56">
+   <properties>
+    <property name="bottom" value="True"/>
+    <property name="left" value="True"/>
+    <property name="right" value="True"/>
+    <property name="top" value="True"/>
+   </properties>
+  </tile>
+  <tile id="82">
+   <properties>
+    <property name="bottom" value="True"/>
+    <property name="left" value="True"/>
+    <property name="right" value="True"/>
+    <property name="top" value="True"/>
+   </properties>
+  </tile>
+  <tile id="102">
+   <properties>
+    <property name="bottom" value="True"/>
+    <property name="left" value="True"/>
+    <property name="right" value="True"/>
+    <property name="top" value="True"/>
+   </properties>
+  </tile>
+  <tile id="122">
+   <properties>
+    <property name="free_space" value="True"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="map" width="20" height="10">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA6tmYGCopgKGAWqYhW5eOhrGpp6QPCH34dJHjn/TCbDR3ZmOwzxS3YTNfbjCBFt4YeMT8q8MGW6TwWGeDBJG1xOMxLYAYks0PTDASCUMAwAJ8YKMIAMAAA==
+  </data>
+ </layer>
+</map>
