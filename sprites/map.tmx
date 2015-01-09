@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" width="20" height="10" tilewidth="32" tileheight="32">
- <tileset firstgid="1" name="grass-tiles-2-small" tilewidth="32" tileheight="32">
-  <properties>
-   <property name="bottom" value="True"/>
-   <property name="left" value="True"/>
-   <property name="right" value="True"/>
-   <property name="top" value="True"/>
-  </properties>
-  <image source="grass-tiles-2-small.png" width="384" height="192"/>
-  <tile id="6">
+ <tileset firstgid="1" name="forest_tiles" tilewidth="32" tileheight="32">
+  <image source="forest_tiles.png" width="512" height="512"/>
+  <tile id="0">
    <properties>
     <property name="bottom" value="True"/>
     <property name="left" value="True"/>
@@ -16,15 +10,7 @@
     <property name="top" value="True"/>
    </properties>
   </tile>
-  <tile id="10">
-   <properties>
-    <property name="" value=""/>
-    <property name="left" value="True"/>
-    <property name="right" value="True"/>
-    <property name="top" value="True"/>
-   </properties>
-  </tile>
-  <tile id="25">
+  <tile id="27">
    <properties>
     <property name="bottom" value="True"/>
     <property name="left" value="True"/>
@@ -32,18 +18,47 @@
     <property name="top" value="True"/>
    </properties>
   </tile>
-  <tile id="36">
+  <tile id="55">
    <properties>
     <property name="bottom" value="True"/>
     <property name="left" value="True"/>
     <property name="right" value="True"/>
     <property name="top" value="True"/>
+   </properties>
+  </tile>
+  <tile id="56">
+   <properties>
+    <property name="bottom" value="True"/>
+    <property name="left" value="True"/>
+    <property name="right" value="True"/>
+    <property name="top" value="True"/>
+   </properties>
+  </tile>
+  <tile id="82">
+   <properties>
+    <property name="bottom" value="True"/>
+    <property name="left" value="True"/>
+    <property name="right" value="True"/>
+    <property name="top" value="True"/>
+   </properties>
+  </tile>
+  <tile id="102">
+   <properties>
+    <property name="bottom" value="True"/>
+    <property name="left" value="True"/>
+    <property name="right" value="True"/>
+    <property name="top" value="True"/>
+   </properties>
+  </tile>
+  <tile id="122">
+   <properties>
+    <property name="free_space" value="True"/>
    </properties>
   </tile>
  </tileset>
  <layer name="map" width="20" height="10">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGBggBaXZqWAGLkCJ2chmIGNs5kshuQWZTStAyA5sbsVlDj79uPyNzS3Y3ETrcMDmFm4qYwCALhApIAMAAA==
+   H4sIAAAAAAAAA6tmYGCoHqQ4HYlGxrjUosujs3HpRVdLLXfjYmNzJwON3ITL37jCC5fbcblHhgw34dIjg4TR5YKR2BZAbImmBybHSGUMAJEluLQgAwAA
   </data>
  </layer>
 </map>

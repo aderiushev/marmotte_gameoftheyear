@@ -108,6 +108,10 @@ class MoveController(cocos.actions.Action, cocos.tiles.RectMapCollider):
         new.x += dx
         new.y += dy * dt
 
+        # setting last x position of sprite if it is less or bigger than map size
+        if new.x < 0 or new.x + self.target.width > tilemap.px_width:
+            new.x = last.x
+
         """
         small ugly fix.
         did it beacause of:
@@ -121,6 +125,7 @@ class MoveController(cocos.actions.Action, cocos.tiles.RectMapCollider):
         if not self.target.calcDy:
             new.y = last.y
             self.target.calcDy = True
+
 
         # calcing new velocity (accelerations, position) to hero
         self.target.velocity = self.collide_map(tilemap, last, new, dy, dx)
@@ -186,7 +191,7 @@ class GameLayer(cocos.layer.ScrollableLayer):
         super(GameLayer, self).__init__()
         global tilemap, hero1, hero2
         scroller = cocos.layer.ScrollingManager()
-        tilemap = cocos.tiles.load('sprites/map3.tmx')['map']
+        tilemap = cocos.tiles.load('sprites/map.tmx')['map']
 
         scroller.add(tilemap)
         self.add(scroller)
