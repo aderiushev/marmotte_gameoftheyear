@@ -3,7 +3,7 @@ from Main import Main
 from Game import Game
 from cocos.director import director
 from cocos.menu import *
-from cocos.layer import *
+from cocos.layer import MultiplexLayer
 
 class MainMenu(cocos.scene.Scene):
     def __init__(self):
@@ -13,7 +13,7 @@ class MainMenu(cocos.scene.Scene):
 class GameMenu(Menu):
     def __init__(self):
         # call superclass with the title
-        super(GameMenu, self).__init__("myGame")
+        super(GameMenu, self).__init__("Jump'n'Pymp")
 
         #pyglet.font.add_directory('.')
 
@@ -34,9 +34,9 @@ class GameMenu(Menu):
         self.menu_halign = CENTER
 
         items = []
-        items.append(MenuItem('New Game', self.on_new_game))
-        items.append(MenuItem('Options', self.on_options))
-        items.append(MenuItem('Scores', self.on_scores))
+        items.append(MenuItem('Local', self.on_new_game))
+        items.append(MenuItem('Network', self.on_options))
+        items.append(MenuItem('Options', self.on_scores))
         items.append(MenuItem('Quit', self.on_quit))
 
         self.create_menu(items, shake(), shake_back())
