@@ -27,6 +27,7 @@ class Hero(cocos.sprite.Sprite):
     moving_direction_vertical = None
     moving_direction_horizontal = None
     wins = 0
+    accelerate = 0
 
 
     def __init__(self):
@@ -54,6 +55,17 @@ class Hero(cocos.sprite.Sprite):
         playerRect = self.get_rect()
         playerRect.midbottom = start_tile.midbottom
         self.position = playerRect.center
+
+    def increaceAccelerate(self):
+        if self.accelerate < 100:
+            self.accelerate += 1
+
+    def decreaceAccelerate(self):
+        if self.accelerate > 0:
+            self.accelerate -= 1
+
+    def getAccelerate(self):
+        return self.accelerate / 100.
 
 class Hero1(Hero):
     baseSpriteImage = 'sprites/hero1_sprite.png'
@@ -94,7 +106,13 @@ class MoveController(cocos.actions.Action, cocos.tiles.RectMapCollider):
         dx, dy = self.target.velocity
         # detection of direction (may be LEFT = -1, NOACTION = 0, RIGHT = 1)
         direction = self.keyboard[self.target.CONTROL_RIGHT] - self.keyboard[self.target.CONTROL_LEFT]
-        dx = direction * self.target.move_speed * dt
+        
+        if direction <> 0:
+            self.target.increaceAccelerate()
+        else:
+            self.target.decreaceAccelerate()
+        
+        dx = direction * (self.target.move_speed * self.target.getAccelerate()) * dt
         # setting dy to default gravity value
         dy = dy + self.target.gravity * dt
         # allowing to jump when hero is on ground
